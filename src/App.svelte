@@ -1,5 +1,5 @@
-<main>
-  <h1 on:click={click}>Hello1 {name}!</h1>
+<main class="wrap">
+  <h1 class="wrap-title" on:click={click}>Hello1 {name}!</h1>
 
   <SearchInput />
 
@@ -24,18 +24,24 @@
   }
 </script>
 
-<style>
+<style lang="less">
   main {
     text-align: center;
     padding: 1em;
     max-width: 240px;
     margin: 0 auto;
+    h1 {
+      color: #ff3e00;
+      text-transform: uppercase;
+      font-size: 4em;
+      font-weight: 100;
+    }
   }
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+
+  .wrap {
+    &-title {
+      font-size: 5em;
+    }
   }
   @media (min-width: 640px) {
     main {

@@ -25,11 +25,11 @@ const production = !process.env.ROLLUP_WATCH;
 function getPlugins({ ssr }) {
   return [
     svelte({
-      preprocess: sveltePreprocess(),
+      preprocess: sveltePreprocess({}),
       compilerOptions: {
         // enable run-time checks when not in production
         dev: !production,
-        hydratable: ssr ? false : true,
+        hydratable: !ssr,
         generate: ssr ? 'ssr' : 'dom',
       },
     }),
