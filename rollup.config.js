@@ -13,11 +13,10 @@ import replace from '@rollup/plugin-replace';
 import alias from '@rollup/plugin-alias';
 
 // 使用
-// import { staticRenderPlugin } from './plugins';
+// import { staticRenderPlugin, serve } from './plugins';
 // 报错
 // ! `[!] Error: Could not resolve './plugins' from rollup.config.js`
-// 可能是 yarn pnp 引起，改用 require
-
+// 改用 require
 const { staticRenderPlugin, serve } = require('./plugins');
 
 const production = !process.env.ROLLUP_WATCH;
