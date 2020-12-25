@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@rollup/plugin-alias", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz"],
             ["@rollup/plugin-commonjs", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:16.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-commonjs%2Fdownload%2F%40rollup%2Fplugin-commonjs-16.0.0.tgz"],
             ["@rollup/plugin-node-resolve", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:10.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-node-resolve%2Fdownload%2F%40rollup%2Fplugin-node-resolve-10.0.0.tgz"],
             ["@rollup/plugin-replace", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:2.3.4::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-replace%2Fdownload%2F%40rollup%2Fplugin-replace-2.3.4.tgz"],
@@ -46,7 +47,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.16::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.16.tgz"],
             ["rollup", "npm:2.35.1"],
             ["rollup-plugin-css-only", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:3.1.0"],
-            ["rollup-plugin-livereload", "npm:2.0.0"],
             ["rollup-plugin-svelte", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:7.0.0"],
             ["rollup-plugin-terser", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:7.0.2"],
             ["svelte", "npm:3.31.0"],
@@ -54,7 +54,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["svelte-preprocess", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:4.6.1"],
             ["ts-node", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:9.1.1"],
             ["tslib", "npm:2.0.3"],
-            ["typescript", "patch:typescript@npm%3A4.1.3%3A%3A__archiveUrl=https%253A%252F%252Fregistry.npm.taobao.org%252Ftypescript%252Fdownload%252Ftypescript-4.1.3.tgz#builtin<compat/typescript>::version=4.1.3&hash=cc6730"]
+            ["typescript", "patch:typescript@npm%3A4.1.3%3A%3A__archiveUrl=https%253A%252F%252Fregistry.npm.taobao.org%252Ftypescript%252Fdownload%252Ftypescript-4.1.3.tgz#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
+            ["typescript-transform-paths", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz"]
           ],
           "linkType": "SOFT",
         }]
@@ -86,6 +87,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-validator-identifier", "npm:7.12.11::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fhelper-validator-identifier%2Fdownload%2F%40babel%2Fhelper-validator-identifier-7.12.11.tgz"],
             ["chalk", "npm:2.4.2"],
             ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@rollup/plugin-alias", [
+        ["npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz", {
+          "packageLocation": "../../../../.yarn/berry/cache/@rollup-plugin-alias-npm-3.1.1-701774c912-7.zip/node_modules/@rollup/plugin-alias/",
+          "packageDependencies": [
+            ["@rollup/plugin-alias", "npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz", {
+          "packageLocation": "./.yarn/$$virtual/@rollup-plugin-alias-virtual-f9af853b1d/5/.yarn/berry/cache/@rollup-plugin-alias-npm-3.1.1-701774c912-7.zip/node_modules/@rollup/plugin-alias/",
+          "packageDependencies": [
+            ["@rollup/plugin-alias", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz"],
+            ["@types/rollup", null],
+            ["rollup", "npm:2.35.1"],
+            ["slash", "npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fslash%2Fdownload%2Fslash-3.0.0.tgz"]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
           ],
           "linkType": "HARD",
         }]
@@ -424,15 +448,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "../../../../.yarn/berry/cache/assert-plus-npm-1.0.0-2a5298a110-7.zip/node_modules/assert-plus/",
           "packageDependencies": [
             ["assert-plus", "npm:1.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fassert-plus%2Fdownload%2Fassert-plus-1.0.0.tgz"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["async-limiter", [
-        ["npm:1.0.1", {
-          "packageLocation": "../../../../.yarn/berry/cache/async-limiter-npm-1.0.1-7e6819bcdb-7.zip/node_modules/async-limiter/",
-          "packageDependencies": [
-            ["async-limiter", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -1291,28 +1306,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["livereload", [
-        ["npm:0.9.1", {
-          "packageLocation": "../../../../.yarn/berry/cache/livereload-npm-0.9.1-114d3441af-7.zip/node_modules/livereload/",
-          "packageDependencies": [
-            ["livereload", "npm:0.9.1"],
-            ["chokidar", "npm:3.4.3"],
-            ["livereload-js", "npm:3.3.1"],
-            ["opts", "npm:2.0.2"],
-            ["ws", "virtual:114d3441af396905699cc6c0ef9f52f81941b7416ff3263a16e08cce2949343adfb0e918ae484e697c7eebe0568f1bdf09e71a57422ab22d4eb3bd7a6b1a7e73#npm:6.2.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["livereload-js", [
-        ["npm:3.3.1", {
-          "packageLocation": "../../../../.yarn/berry/cache/livereload-js-npm-3.3.1-e19212c0e5-7.zip/node_modules/livereload-js/",
-          "packageDependencies": [
-            ["livereload-js", "npm:3.3.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["lru-cache", [
         ["npm:6.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Flru-cache%2Fdownload%2Flru-cache-6.0.0.tgz", {
           "packageLocation": "../../../../.yarn/berry/cache/lru-cache-npm-6.0.0-2534f00ab3-7.zip/node_modules/lru-cache/",
@@ -1512,15 +1505,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["once", "npm:1.4.0"],
             ["wrappy", "npm:1.0.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["opts", [
-        ["npm:2.0.2", {
-          "packageLocation": "../../../../.yarn/berry/cache/opts-npm-2.0.2-62d5ec5b16-7.zip/node_modules/opts/",
-          "packageDependencies": [
-            ["opts", "npm:2.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -1744,16 +1728,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["rollup-plugin-livereload", [
-        ["npm:2.0.0", {
-          "packageLocation": "../../../../.yarn/berry/cache/rollup-plugin-livereload-npm-2.0.0-a2772b6626-7.zip/node_modules/rollup-plugin-livereload/",
-          "packageDependencies": [
-            ["rollup-plugin-livereload", "npm:2.0.0"],
-            ["livereload", "npm:0.9.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["rollup-plugin-svelte", [
         ["npm:7.0.0", {
           "packageLocation": "../../../../.yarn/berry/cache/rollup-plugin-svelte-npm-7.0.0-1ff40c9fb4-7.zip/node_modules/rollup-plugin-svelte/",
@@ -1888,11 +1862,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["slash", [
+        ["npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fslash%2Fdownload%2Fslash-3.0.0.tgz", {
+          "packageLocation": "../../../../.yarn/berry/cache/slash-npm-3.0.0-cb773595d9-7.zip/node_modules/slash/",
+          "packageDependencies": [
+            ["slash", "npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fslash%2Fdownload%2Fslash-3.0.0.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["so", [
         ["workspace:.", {
           "packageLocation": "./",
           "packageDependencies": [
             ["so", "workspace:."],
+            ["@rollup/plugin-alias", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz"],
             ["@rollup/plugin-commonjs", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:16.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-commonjs%2Fdownload%2F%40rollup%2Fplugin-commonjs-16.0.0.tgz"],
             ["@rollup/plugin-node-resolve", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:10.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-node-resolve%2Fdownload%2F%40rollup%2Fplugin-node-resolve-10.0.0.tgz"],
             ["@rollup/plugin-replace", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:2.3.4::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-replace%2Fdownload%2F%40rollup%2Fplugin-replace-2.3.4.tgz"],
@@ -1902,7 +1886,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.16::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.16.tgz"],
             ["rollup", "npm:2.35.1"],
             ["rollup-plugin-css-only", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:3.1.0"],
-            ["rollup-plugin-livereload", "npm:2.0.0"],
             ["rollup-plugin-svelte", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:7.0.0"],
             ["rollup-plugin-terser", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:7.0.2"],
             ["svelte", "npm:3.31.0"],
@@ -1910,7 +1893,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["svelte-preprocess", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:4.6.1"],
             ["ts-node", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:9.1.1"],
             ["tslib", "npm:2.0.3"],
-            ["typescript", "patch:typescript@npm%3A4.1.3%3A%3A__archiveUrl=https%253A%252F%252Fregistry.npm.taobao.org%252Ftypescript%252Fdownload%252Ftypescript-4.1.3.tgz#builtin<compat/typescript>::version=4.1.3&hash=cc6730"]
+            ["typescript", "patch:typescript@npm%3A4.1.3%3A%3A__archiveUrl=https%253A%252F%252Fregistry.npm.taobao.org%252Ftypescript%252Fdownload%252Ftypescript-4.1.3.tgz#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
+            ["typescript-transform-paths", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz"]
           ],
           "linkType": "SOFT",
         }]
@@ -2262,6 +2246,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["typescript-transform-paths", [
+        ["npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz", {
+          "packageLocation": "../../../../.yarn/berry/cache/typescript-transform-paths-npm-2.1.0-700369b2dc-7.zip/node_modules/typescript-transform-paths/",
+          "packageDependencies": [
+            ["typescript-transform-paths", "npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz", {
+          "packageLocation": "./.yarn/$$virtual/typescript-transform-paths-virtual-75b3602cae/5/.yarn/berry/cache/typescript-transform-paths-npm-2.1.0-700369b2dc-7.zip/node_modules/typescript-transform-paths/",
+          "packageDependencies": [
+            ["typescript-transform-paths", "virtual:2824c023798f08eb0fe3056773a1835062b14dd84aeb27a369d7f680b6034d242f8b30bdd4575f7f71606ab5b4e980d61101ff1ec9898795a922f371428e4298#npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz"],
+            ["@types/typescript", null],
+            ["typescript", "patch:typescript@npm%3A4.1.3%3A%3A__archiveUrl=https%253A%252F%252Fregistry.npm.taobao.org%252Ftypescript%252Fdownload%252Ftypescript-4.1.3.tgz#builtin<compat/typescript>::version=4.1.3&hash=cc6730"]
+          ],
+          "packagePeers": [
+            "@types/typescript",
+            "typescript"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["uri-js", [
         ["npm:4.4.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Furi-js%2Fdownload%2Furi-js-4.4.0.tgz", {
           "packageLocation": "../../../../.yarn/berry/cache/uri-js-npm-4.4.0-90170665b8-7.zip/node_modules/uri-js/",
@@ -2327,33 +2333,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "../../../../.yarn/berry/cache/wrappy-npm-1.0.2-916de4d4b3-7.zip/node_modules/wrappy/",
           "packageDependencies": [
             ["wrappy", "npm:1.0.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["ws", [
-        ["npm:6.2.1", {
-          "packageLocation": "../../../../.yarn/berry/cache/ws-npm-6.2.1-bbe0ef9859-7.zip/node_modules/ws/",
-          "packageDependencies": [
-            ["ws", "npm:6.2.1"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:114d3441af396905699cc6c0ef9f52f81941b7416ff3263a16e08cce2949343adfb0e918ae484e697c7eebe0568f1bdf09e71a57422ab22d4eb3bd7a6b1a7e73#npm:6.2.1", {
-          "packageLocation": "./.yarn/$$virtual/ws-virtual-a95055f7c5/5/.yarn/berry/cache/ws-npm-6.2.1-bbe0ef9859-7.zip/node_modules/ws/",
-          "packageDependencies": [
-            ["ws", "virtual:114d3441af396905699cc6c0ef9f52f81941b7416ff3263a16e08cce2949343adfb0e918ae484e697c7eebe0568f1bdf09e71a57422ab22d4eb3bd7a6b1a7e73#npm:6.2.1"],
-            ["@types/bufferutil", null],
-            ["@types/utf-8-validate", null],
-            ["async-limiter", "npm:1.0.1"],
-            ["bufferutil", null],
-            ["utf-8-validate", null]
-          ],
-          "packagePeers": [
-            "@types/bufferutil",
-            "@types/utf-8-validate",
-            "bufferutil",
-            "utf-8-validate"
           ],
           "linkType": "HARD",
         }]

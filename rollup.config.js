@@ -10,6 +10,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import replace from '@rollup/plugin-replace';
+import alias from '@rollup/plugin-alias';
 
 // 使用
 // import { staticRenderPlugin } from './plugins';
@@ -42,13 +43,18 @@ function getPlugins({ ssr }) {
     // consult the documentation for details:
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
     resolve({
-      browser: true,
+      browser: !ssr,
       dedupe: ['svelte'],
     }),
     commonjs(),
     typescript({
+      tsconfig: 'tsconfig.json',
       sourceMap: !production,
       inlineSources: !production,
+    }),
+
+    alias({
+      entries: [{ find: '@', replacement: 'src' }],
     }),
 
     // In dev mode, call `npm run start` once

@@ -1,8 +1,26 @@
+<main>
+  <h1 on:click={click}>Hello1 {name}!</h1>
+
+  <SearchInput />
+
+  <hr />
+
+  <p>
+    Visit the1
+    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+    to learn how to build Svelte apps.
+  </p>
+</main>
+
 <script lang="ts">
+  import SearchInput from '@/components/SearchInput.svelte';
+  import { a as foo } from '@/shared';
+
   export let name: string;
 
   function click() {
     name = 'ssssss';
+    foo();
   }
 </script>
 
@@ -25,15 +43,3 @@
     }
   }
 </style>
-
-<main>
-  <h1 on:click={click}>Hello {name}!</h1>
-
-  <hr />
-
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
-</main>

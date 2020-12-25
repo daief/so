@@ -32,6 +32,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-alias@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@rollup/plugin-alias@npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-alias%2Fdownload%2F%40rollup%2Fplugin-alias-3.1.1.tgz"
+  dependencies:
+    slash: ^3.0.0
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0
+  checksum: 785d8a4283e59bbd76447e2ea5128e34c9ebf59b626841a82d5c8366687439c2fe7d0690be04e73e51ada5264d1efdfd4de8ec2528f4f9428f9541040311262c
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-commonjs@npm:^16.0.0":
   version: 16.0.0
   resolution: "@rollup/plugin-commonjs@npm:16.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-commonjs%2Fdownload%2F%40rollup%2Fplugin-commonjs-16.0.0.tgz"
@@ -270,13 +281,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async-limiter@npm:~1.0.0":
-  version: 1.0.1
-  resolution: "async-limiter@npm:1.0.1"
-  checksum: d123312ace75c07399ddc58e06cc028dacce35f71cdf59cf9b22f6c31dde221c22285e6185ede823ecb67f3b3065e26205eb9f74fcbba3f12ce7a2c2b09d7763
-  languageName: node
-  linkType: hard
-
 "asynckit@npm:^0.4.0":
   version: 0.4.0
   resolution: "asynckit@npm:0.4.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fasynckit%2Fdownload%2Fasynckit-0.4.0.tgz"
@@ -389,7 +393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.3.0, chokidar@npm:^3.4.1":
+"chokidar@npm:^3.4.1":
   version: 3.4.3
   resolution: "chokidar@npm:3.4.3"
   dependencies:
@@ -1017,27 +1021,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"livereload-js@npm:^3.1.0":
-  version: 3.3.1
-  resolution: "livereload-js@npm:3.3.1"
-  checksum: 2cf4ab6f51301bd5964b0432bed066541839e0ec560e5df1b4049a2547a87a9dd01ed83df2b1687f022887ca2534e4a65104385374775179bd861d6f3dc57d25
-  languageName: node
-  linkType: hard
-
-"livereload@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "livereload@npm:0.9.1"
-  dependencies:
-    chokidar: ^3.3.0
-    livereload-js: ^3.1.0
-    opts: ">= 1.2.0"
-    ws: ^6.2.1
-  bin:
-    livereload: ./bin/livereload.js
-  checksum: e2c850e5d6c0191cc0796c0558f6c71bded88c3982835529dc8559e406516c61d3038e757e4a70a5ccf65b107ca8eace9b1a2211e5e3c71bacf329f971e606b1
-  languageName: node
-  linkType: hard
-
 "lru-cache@npm:^6.0.0":
   version: 6.0.0
   resolution: "lru-cache@npm:6.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Flru-cache%2Fdownload%2Flru-cache-6.0.0.tgz"
@@ -1214,13 +1197,6 @@ fsevents@~2.1.2:
   dependencies:
     wrappy: 1
   checksum: 57afc246536cf6494437f982b26475f22bee860f8b77ce8eb1543f42a8bffe04b2c66ddfea9a16cb25ccb80943f8ee4fc639367ef97b7a6a4f2672eb573963f5
-  languageName: node
-  linkType: hard
-
-"opts@npm:>= 1.2.0":
-  version: 2.0.2
-  resolution: "opts@npm:2.0.2"
-  checksum: 9f06c54f4dfa7ddccbf7c42b2e170076c5eabfacafe4249f643bda50462dabf0543405557eb619d2f09c886075c2bcaba2c2e8b5e23fcf4f899fc259e3e4397d
   languageName: node
   linkType: hard
 
@@ -1406,15 +1382,6 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
-"rollup-plugin-livereload@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "rollup-plugin-livereload@npm:2.0.0"
-  dependencies:
-    livereload: ^0.9.1
-  checksum: e32fc0e3dc090128af39f5ce3d7d442fc27f9059e596a2a81541553b3f600dab708c3a507ffcc0eb6b36e40726f67be1b4a77ecbf15ffcc66b7724acd3c6d52b
-  languageName: node
-  linkType: hard
-
 "rollup-plugin-svelte@npm:^7.0.0":
   version: 7.0.0
   resolution: "rollup-plugin-svelte@npm:7.0.0"
@@ -1527,10 +1494,18 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
+"slash@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "slash@npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fslash%2Fdownload%2Fslash-3.0.0.tgz"
+  checksum: fc3e8597d822ee3ba6cd76e9b001cd5be315f9b81c3a03a29bb611c003d1484e3b29a9e7bc020298fa669b585ff7c9268f44513f60c186216eb6af3111a3e838
+  languageName: node
+  linkType: hard
+
 "so@workspace:.":
   version: 0.0.0-use.local
   resolution: "so@workspace:."
   dependencies:
+    "@rollup/plugin-alias": ^3.1.1
     "@rollup/plugin-commonjs": ^16.0.0
     "@rollup/plugin-node-resolve": ^10.0.0
     "@rollup/plugin-replace": ^2.3.4
@@ -1540,7 +1515,6 @@ resolve@^1.17.0:
     "@types/node": ^14.14.16
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
-    rollup-plugin-livereload: ^2.0.0
     rollup-plugin-svelte: ^7.0.0
     rollup-plugin-terser: ^7.0.0
     svelte: ^3.31.0
@@ -1549,6 +1523,7 @@ resolve@^1.17.0:
     ts-node: ^9.1.1
     tslib: ^2.0.0
     typescript: ^4.0.0
+    typescript-transform-paths: ^2.1.0
   languageName: unknown
   linkType: soft
 
@@ -1843,6 +1818,15 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
+"typescript-transform-paths@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "typescript-transform-paths@npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript-transform-paths%2Fdownload%2Ftypescript-transform-paths-2.1.0.tgz"
+  peerDependencies:
+    typescript: ">=3.6.5"
+  checksum: 0143624cfd0b03c42441d68dbc0b20e9b8745bb91a2202bdfbe99a3498d221313af72323f23feb3b1df9c1286e14e473ce98d1f92c6be518a1dfd8036a5a2e3f
+  languageName: node
+  linkType: hard
+
 "typescript@*, typescript@^4.0.0":
   version: 4.1.3
   resolution: "typescript@npm:4.1.3::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.1.3.tgz"
@@ -1923,15 +1907,6 @@ resolve@^1.17.0:
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
   checksum: 519fcda0fcdf0c16327be2de9d98646742307bc830277e8868529fcf7566f2b330a6453c233e0cdcb767d5838dd61a90984a02ecc983bcddebea5ad0833bbf98
-  languageName: node
-  linkType: hard
-
-"ws@npm:^6.2.1":
-  version: 6.2.1
-  resolution: "ws@npm:6.2.1"
-  dependencies:
-    async-limiter: ~1.0.0
-  checksum: 35d32b09e28f799f04708c3a7bd9eff469ae63e60543d7e18335f28689228a42ee21210f48de680aad6e5317df76b5b1183d1a1ea4b4d14cb6e0943528f40e76
   languageName: node
   linkType: hard
 
