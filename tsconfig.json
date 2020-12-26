@@ -6,7 +6,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*", "plugins/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"]

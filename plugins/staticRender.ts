@@ -1,5 +1,7 @@
 import type { Plugin } from 'rollup';
+import {} from '@rollup/pluginutils';
 import path from 'path';
+import { readFileSync } from 'fs';
 
 const renderHtml = (opts: { content: string; css: string }) => `
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ const renderHtml = (opts: { content: string; css: string }) => `
   </body>
 </html>`;
 
-const ssrpath = path.resolve(process.cwd(), 'public/ssr');
+const ssrpath = path.resolve(process.cwd(), 'public/ssr.js');
 
 export const staticRenderPlugin = (): Plugin => {
   return {

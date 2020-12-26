@@ -24,7 +24,9 @@ const production = !process.env.ROLLUP_WATCH;
 function getPlugins({ ssr }) {
   return [
     svelte({
-      preprocess: sveltePreprocess({}),
+      preprocess: sveltePreprocess({
+        aliases: [['@', 'src']],
+      }),
       compilerOptions: {
         // enable run-time checks when not in production
         dev: !production,

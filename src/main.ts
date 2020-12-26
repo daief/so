@@ -1,7 +1,11 @@
+import 'normalize.css';
+import './global.css';
+import '@/shared/theme';
 import App from './App.svelte';
 
 if (!__SERVER__) {
-  const ins = new App({
+  // @ts-ignore
+  window.______app______ = new App({
     target: document.getElementById('app'),
     props: {
       name: 'world',
