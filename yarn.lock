@@ -178,6 +178,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/query-string@npm:^6":
+  version: 6.2.0
+  resolution: "@types/query-string@npm:6.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fquery-string%2Fdownload%2F%40types%2Fquery-string-6.2.0.tgz"
+  checksum: 53c1ba7ee593a5d66c98195d6abf9ef3e9f5d5130aeeabfd0f028ecbb7cdc53bc8ba9e588a5bc3ce97c416eb5603a104c40d83bf122950ea082b75b6dc52b64b
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:1.17.1":
   version: 1.17.1
   resolution: "@types/resolve@npm:1.17.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fresolve%2Fdownload%2F%40types%2Fresolve-1.17.1.tgz"
@@ -315,6 +322,15 @@ __metadata:
   version: 1.11.0
   resolution: "aws4@npm:1.11.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.11.0.tgz"
   checksum: d30dce2b73839974894d8283a06c53e8374b74d643d3b08340d84c364e01158be011fcfd1a88f8462be946d69055313a3038202f2eafd155b039aaab3549ba21
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.21.1":
+  version: 0.21.1
+  resolution: "axios@npm:0.21.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.21.1.tgz"
+  dependencies:
+    follow-redirects: ^1.10.0
+  checksum: 864fb7b5d077d236737f10adca53bf451a93f35a15271f56fba8da07265a02d26b7d881b935a6697dc6adb0549ea3e56d2eecb403edaa3bb78f6479901c10f69
   languageName: node
   linkType: hard
 
@@ -543,6 +559,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"decode-uri-component@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "decode-uri-component@npm:0.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fdecode-uri-component%2Fdownload%2Fdecode-uri-component-0.2.0.tgz"
+  checksum: d8cb28c33f7b0a70b159b5fa126aee821ba090396689bd46ad2c423c3a658c504d2743ab18060fd5ed1cae5377bdd3632760a8e98ba920ff49637d43dc6a9687
+  languageName: node
+  linkType: hard
+
 "deepmerge@npm:^4.2.2":
   version: 4.2.2
   resolution: "deepmerge@npm:4.2.2"
@@ -675,6 +698,16 @@ __metadata:
   dependencies:
     to-regex-range: ^5.0.1
   checksum: efca43d59b487ad4bc0b2b1cb9e51617c75a7b0159db51fa190c75c3d634ea5fad1ff4750d7c14346add4cd065e3c46e8f99af333edf2b4ec2a424f87e491a85
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.10.0":
+  version: 1.13.1
+  resolution: "follow-redirects@npm:1.13.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.13.1.tgz"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: c7c6c905876b939af04a1b27afa70e9c0ab5015d96f5ee49dd80db6952dc8c960b96a229647504468615d8a1a400da9bec9449e2aea9f9c6da6fdca0ba17d4c2
   languageName: node
   linkType: hard
 
@@ -1405,6 +1438,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"query-string@npm:^6.13.7":
+  version: 6.13.7
+  resolution: "query-string@npm:6.13.7::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fquery-string%2Fdownload%2Fquery-string-6.13.7.tgz"
+  dependencies:
+    decode-uri-component: ^0.2.0
+    split-on-first: ^1.0.0
+    strict-uri-encode: ^2.0.0
+  checksum: b6d9ef79b77640456e764dcb427591e6079616141aa68f1dae444387864cbc44f945d766085a1ebef1e0fa1b0f8faa8925a96eaebf933119b97bacc12c5d22e5
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -1663,8 +1707,11 @@ resolve@^1.17.0:
     "@rollup/pluginutils": ^4.1.0
     "@tsconfig/svelte": ^1.0.0
     "@types/node": ^14.14.16
+    "@types/query-string": ^6
+    axios: ^0.21.1
     less: ^3.11.0
     normalize.css: ^8.0.1
+    query-string: ^6.13.7
     rollup: ^2.3.4
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-svelte: ^7.0.0
@@ -1709,6 +1756,13 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
+"split-on-first@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "split-on-first@npm:1.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fsplit-on-first%2Fdownload%2Fsplit-on-first-1.1.0.tgz"
+  checksum: 2ef26fee62665be9547e8035734b856e658b08fd13e70271a2f258147f29d1f18e12b5cb7f7670d83e113c172a9c5fe3d87d9d7c02a1d3d57824818d75d942ab
+  languageName: node
+  linkType: hard
+
 "sshpk@npm:^1.7.0":
   version: 1.16.1
   resolution: "sshpk@npm:1.16.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fsshpk%2Fdownload%2Fsshpk-1.16.1.tgz"
@@ -1727,6 +1781,13 @@ resolve@^1.17.0:
     sshpk-sign: bin/sshpk-sign
     sshpk-verify: bin/sshpk-verify
   checksum: 4bd7422634ec3730404186179e5d9ba913accc64449f18d594b3a757a3b81000719adc94cf0c93a7b3da42487ae42404a1f37bfaa7908a60743d4478382b9d78
+  languageName: node
+  linkType: hard
+
+"strict-uri-encode@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "strict-uri-encode@npm:2.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fstrict-uri-encode%2Fdownload%2Fstrict-uri-encode-2.0.0.tgz"
+  checksum: 775012e88b9d8dff939d514bf376d615a15e8228a5dd587a94ac3c71fce41aa3635cd808aa796e2c1cd33f3f2fe2fbf89b74ee18a504a1905efa1854311e04bb
   languageName: node
   linkType: hard
 

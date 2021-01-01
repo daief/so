@@ -8,6 +8,8 @@ export function createThemeForCSS(color = '#ff3e00') {
     :root {
       --primary: ${paramry};
       ${colorsStr}
+      --normal-color: #d9d9d9;
+      --radius: 4px;
     }
   `;
   return style;
