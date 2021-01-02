@@ -1,10 +1,16 @@
 <main>
   <div class="ma__input-wrap">
-    <SearchInput />
+    <div class="link-type-sl">
+      <LinkTypeSelect />
+    </div>
+    <div class="search-input-cp">
+      <SearchInput />
+    </div>
   </div>
 </main>
 
 <script lang="ts">
+  import LinkTypeSelect from '@/components/LinkTypeSelect.svelte';
   import SearchInput from '@/components/SearchInput.svelte';
   import { a as foo } from '@/shared';
 
@@ -28,6 +34,15 @@
     &__input-wrap {
       width: 640px;
       max-width: 100%;
+      display: flex;
+      align-items: center;
     }
+  }
+
+  .link-type-sl {
+    margin-right: 10px;
+  }
+  .search-input-cp {
+    flex-grow: 1;
   }
 </style>

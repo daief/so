@@ -1,4 +1,4 @@
-<main on:keydown={handleOnWrapKeyDown}>
+<section on:keydown={handleOnWrapKeyDown}>
   <!-- svelte-ignore a11y-autofocus -->
   <input
     type="text"
@@ -8,12 +8,9 @@
     on:keydown={handleOnKeyDown}
     on:compositionstart={() => (hasComposition = true)}
     on:compositionend={() => (hasComposition = false)}
-    on:focus={() => (isFocus = true)}
-    on:blur={() => (isFocus = false)}
     spellcheck={false}
     autocomplete="off"
     maxlength={2048}
-    autofocus
     placeholder="随便搜搜~" />
 
   <div style="position: relative;">
@@ -25,7 +22,7 @@
       </ul>
     {/if}
   </div>
-</main>
+</section>
 
 <script lang="ts">
   import {
@@ -33,6 +30,7 @@
     getTargetSearchUrl,
     LINK_TYPE,
   } from '@/shared/links';
+  import { selectedLinkType } from '@/store';
   import { tick } from 'svelte';
   import { fade } from 'svelte/transition';
 
@@ -42,7 +40,6 @@
 
   let value: string = '';
   let hasComposition = false;
-  let isFocus = false;
   let sgHoverIndex = 0;
   let autoCompleteId: any;
 
@@ -61,6 +58,11 @@
     suggestionList = [];
   }
 
+  $: {
+    $selectedLinkType;
+    elInput?.focus();
+  }
+
   function handleOnKeyDown(
     e: KeyboardEvent & {
       target: any;
@@ -69,7 +71,7 @@
     if (!trimedValue) return;
     if (e.key === 'Enter') {
       if (hasComposition) return;
-      const target = getTargetSearchUrl(LINK_TYPE.google, displayValue);
+      const target = getTargetSearchUrl($selectedLinkType, displayValue);
       window.open(target, '_blank');
       value = '';
       sgHoverIndex = 0;
@@ -114,7 +116,7 @@
 </script>
 
 <style lang="less">
-  main {
+  section {
     position: relative;
   }
   input {
