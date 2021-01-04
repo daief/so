@@ -30,7 +30,7 @@
     getTargetSearchUrl,
     LINK_TYPE,
   } from '@/shared/links';
-  import { selectedLinkType } from '@/store';
+  import { recentUsedList, selectedLinkType } from '@/store';
   import { tick } from 'svelte';
   import { fade } from 'svelte/transition';
 
@@ -55,6 +55,7 @@
       suggestionList = await autoCompleteHandler(value);
     }, 350);
   } else if (!value) {
+    clearTimeout(autoCompleteId);
     suggestionList = [];
   }
 
@@ -71,11 +72,7 @@
     if (!trimedValue) return;
     if (e.key === 'Enter') {
       if (hasComposition) return;
-      const target = getTargetSearchUrl($selectedLinkType, displayValue);
-      window.open(target, '_blank');
-      value = '';
-      sgHoverIndex = 0;
-      return;
+      submitSearch();
     }
   }
 
@@ -85,6 +82,7 @@
     },
   ) {
     value = e.target.value;
+    sgHoverIndex = 0;
   }
 
   const setInputSelectionToEnd = async () => {
@@ -113,6 +111,19 @@
       return;
     }
   }
+
+  function submitSearch() {
+    const target = getTargetSearchUrl($selectedLinkType, displayValue);
+    window.open(target, '_blank');
+    value = '';
+    sgHoverIndex = 0;
+
+    recentUsedList.update(pre => {
+      const rs = pre.filter(_ => _ !== $selectedLinkType);
+      rs.unshift($selectedLinkType);
+      return rs;
+    });
+  }
 </script>
 
 <style lang="less">
@@ -131,10 +142,11 @@
     -webkit-box-direction: normal;
     background-color: #fff;
     background-image: none;
-    border: 1px solid var(--normal-color);
+    border: 1px solid var(--nc);
     transition: all 0.3s;
     touch-action: manipulation;
     text-overflow: ellipsis;
+    color: var(--tc);
 
     &:hover {
       border-color: var(--color5);
@@ -149,7 +161,7 @@
     top: 3px;
     width: 100%;
     border-radius: var(--radius);
-    border: 1px solid var(--normal-color);
+    border: 1px solid var(--nc);
     margin: 0;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);

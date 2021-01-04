@@ -75,6 +75,7 @@
   }
   section {
     .size();
+    cursor: pointer;
   }
   .panel-wrap {
     position: absolute;

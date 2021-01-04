@@ -1,4 +1,8 @@
 <main>
+  <div style="margin-top: 300px" />
+  <div class="ma__usually-wrap">
+    <RecentUsage />
+  </div>
   <div class="ma__input-wrap">
     <div class="link-type-sl">
       <LinkTypeSelect />
@@ -12,14 +16,7 @@
 <script lang="ts">
   import LinkTypeSelect from '@/components/LinkTypeSelect.svelte';
   import SearchInput from '@/components/SearchInput.svelte';
-  import { a as foo } from '@/shared';
-
-  export let name: string;
-
-  function click() {
-    name = 'ssssss';
-    foo();
-  }
+  import RecentUsage from './components/RecentUsage.svelte';
 </script>
 
 <style lang="less">
@@ -27,10 +24,15 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   .ma {
+    &__usually-wrap {
+      width: 640px;
+      max-width: 100%;
+      padding-left: 80px;
+      margin-bottom: 10px;
+    }
     &__input-wrap {
       width: 640px;
       max-width: 100%;
