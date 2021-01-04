@@ -17,7 +17,12 @@
     {#if suggestionList.length > 0}
       <ul class="sg-wrap el-shadow " transition:fade={{ duration: 200 }}>
         {#each suggestionList as item, idx}
-          <li title={item} class:focus={idx + 1 === sgHoverIndex}>{item}</li>
+          <li
+            title={item}
+            class:focus={idx + 1 === sgHoverIndex}
+            on:click={() => handleOnClickSuggestion(item)}>
+            {item}
+          </li>
         {/each}
       </ul>
     {/if}
@@ -52,7 +57,8 @@
   $: if (value && !__SERVER__) {
     clearTimeout(autoCompleteId);
     autoCompleteId = setTimeout(async () => {
-      suggestionList = await autoCompleteHandler(value);
+      const ls = await autoCompleteHandler(value);
+      value && (suggestionList = ls);
     }, 350);
   } else if (!value) {
     clearTimeout(autoCompleteId);
@@ -72,7 +78,7 @@
     if (!trimedValue) return;
     if (e.key === 'Enter') {
       if (hasComposition) return;
-      submitSearch();
+      submitSearch(displayValue);
     }
   }
 
@@ -112,8 +118,12 @@
     }
   }
 
-  function submitSearch() {
-    const target = getTargetSearchUrl($selectedLinkType, displayValue);
+  function handleOnClickSuggestion(suggest: string) {
+    submitSearch(suggest);
+  }
+
+  function submitSearch(searchVal: string) {
+    const target = getTargetSearchUrl($selectedLinkType, searchVal);
     window.open(target, '_blank');
     value = '';
     sgHoverIndex = 0;
@@ -121,6 +131,7 @@
     recentUsedList.update(pre => {
       const rs = pre.filter(_ => _ !== $selectedLinkType);
       rs.unshift($selectedLinkType);
+      rs.splice(5);
       return rs;
     });
   }
