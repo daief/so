@@ -11,6 +11,7 @@ import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import replace from '@rollup/plugin-replace';
 import alias from '@rollup/plugin-alias';
+import visualizer from 'rollup-plugin-visualizer';
 
 // 使用
 // import { staticRenderPlugin, serve } from './plugins';
@@ -67,6 +68,15 @@ function getPlugins({ ssr }) {
     // instead of npm run dev), minify
     !ssr && production && terser(),
     !ssr && staticRenderPlugin(),
+    !ssr &&
+      production &&
+      !!process.env.ROLLUP_VISUALIZER &&
+      visualizer({
+        sourcemap: true,
+        gzipSize: true,
+        open: true,
+        filename: 'public/stats.html',
+      }),
     replace({
       __SERVER__: ssr,
     }),

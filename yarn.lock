@@ -236,12 +236,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-regex@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "ansi-regex@npm:5.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-regex%2Fdownload%2Fansi-regex-5.0.0.tgz"
+  checksum: cbd9b5c9dbbb4a949c2a6e93f1c6cc19f0683d8a4724d08d2158627be6d373f0f3ba1f4ada01dce7ee141f2ba2628fbbd29932c7d49926e3b630c7f329f3178b
+  languageName: node
+  linkType: hard
+
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
   dependencies:
     color-convert: ^1.9.0
   checksum: 456e1c23d9277512a47718da75e7fbb0a5ee215ef893c2f76d6b3efe8fceabc861121b80b0362146f5f995d21a1633f05a19bbf6283ae66ac11dc3b9c0bed779
+  languageName: node
+  linkType: hard
+
+"ansi-styles@npm:^4.0.0":
+  version: 4.3.0
+  resolution: "ansi-styles@npm:4.3.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-styles%2Fdownload%2Fansi-styles-4.3.0.tgz"
+  dependencies:
+    color-convert: ^2.0.1
+  checksum: ea02c0179f3dd089a161f5fdd7ccd89dd84f31d82b68869f1134bf5c5b9e1313dadd2ff9edb02b44f46243f285ef5b785f6cb61c84a293694221417c42934407
   languageName: node
   linkType: hard
 
@@ -451,6 +467,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^7.0.2":
+  version: 7.0.4
+  resolution: "cliui@npm:7.0.4::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fcliui%2Fdownload%2Fcliui-7.0.4.tgz"
+  dependencies:
+    string-width: ^4.2.0
+    strip-ansi: ^6.0.0
+    wrap-ansi: ^7.0.0
+  checksum: c49ac1d13f6dda4beaa11b26f62867e0e9892eb985951187d7c691793e0fe08b9bc15cedfaf4dc6d2e9a4d1516704c0c9dcb671ebcd758dbabb18b5d757fbdb5
+  languageName: node
+  linkType: hard
+
 "code-point-at@npm:^1.0.0":
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fcode-point-at%2Fdownload%2Fcode-point-at-1.1.0.tgz"
@@ -611,6 +638,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"emoji-regex@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "emoji-regex@npm:8.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Femoji-regex%2Fdownload%2Femoji-regex-8.0.0.tgz"
+  checksum: 87cf3f89efb8ba028075b3dc1713e2c5609af94cbc129b1f00c3113d01dbe4bf85c9d971e75a98bf8a8508131727682ce929e4bd70e9022af4fd47d75e9507de
+  languageName: node
+  linkType: hard
+
 "env-paths@npm:^2.2.0":
   version: 2.2.0
   resolution: "env-paths@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fenv-paths%2Fdownload%2Fenv-paths-2.2.0.tgz"
@@ -626,6 +660,13 @@ __metadata:
   bin:
     errno: cli.js
   checksum: daf7a2aab678c3e5207eabc15e0f40bf1617cb1f69a120cac1b0418876e2f855d7eecb45818bf75a377f1566047ead322188613a12e9fb45145d98c32b6e718b
+  languageName: node
+  linkType: hard
+
+"escalade@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "escalade@npm:3.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fescalade%2Fdownload%2Fescalade-3.1.1.tgz"
+  checksum: 1e31ff50d66f47cd0dfffa702061127116ccf9886d1f54a802a7b3bc95b94cab0cbf5b145cc5ac199036df6fd9d1bb24af1fa1bfed87c94879e950fbee5f86d1
   languageName: node
   linkType: hard
 
@@ -783,6 +824,13 @@ fsevents@~2.1.2:
     strip-ansi: ^3.0.1
     wide-align: ^1.1.0
   checksum: b136dbeb8e40acaaddab6c71c9f34d3c9aa104efc538c8c0ddcd74b25efb8daeb8dca24a9b30626b477d66beccd3dee8dd31e25eb4c7c97ec58a3f1a82914be1
+  languageName: node
+  linkType: hard
+
+"get-caller-file@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "get-caller-file@npm:2.0.5::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fget-caller-file%2Fdownload%2Fget-caller-file-2.0.5.tgz"
+  checksum: 9dd9e1e2591039ee4c38c897365b904f66f1e650a8c1cb7b7db8ce667fa63e88cc8b13282b74df9d93de481114b3304a0487880d31cd926dfda6efe71455855d
   languageName: node
   linkType: hard
 
@@ -965,6 +1013,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"is-docker@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "is-docker@npm:2.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fis-docker%2Fdownload%2Fis-docker-2.1.1.tgz"
+  bin:
+    is-docker: cli.js
+  checksum: dc8e36fa63a246728e5dd4b3ab2d454f685d3dcc1fecbe62144a0c3bc1f5eef0cf67cb3af1b4a9d274dd18877b954b651c7ef0a483abae6a7a2baa8f987554ba
+  languageName: node
+  linkType: hard
+
 "is-extglob@npm:^2.1.1":
   version: 2.1.1
   resolution: "is-extglob@npm:2.1.1"
@@ -985,6 +1042,13 @@ fsevents@~2.1.2:
   version: 2.0.0
   resolution: "is-fullwidth-code-point@npm:2.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fis-fullwidth-code-point%2Fdownload%2Fis-fullwidth-code-point-2.0.0.tgz"
   checksum: e1e5284f848ab6885665967cd768292a75022304d4401e78937a68f423047c29bfe87a43a9cdb67a3210fff7bcd5da51469122a0eff59b03261c379e58dbe921
+  languageName: node
+  linkType: hard
+
+"is-fullwidth-code-point@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-fullwidth-code-point@npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fis-fullwidth-code-point%2Fdownload%2Fis-fullwidth-code-point-3.0.0.tgz"
+  checksum: a01a19ecac34386ae3a4e801c5639d6e31082d1ddc418e7cd96317fef3c8b24ec8531558e9d3d35b33551ab9c5cf20bf2cdefa583927b7ff60c27c8d7c216063
   languageName: node
   linkType: hard
 
@@ -1031,6 +1095,15 @@ fsevents@~2.1.2:
   version: 3.12.0
   resolution: "is-what@npm:3.12.0"
   checksum: d343342b1c2a013fe5afe05bf6e08c75c113d9d33dd61a3dd180551c6eed45811c3d9184be695e67ca36da0bc2921c396d4c7409bfce22418dfbc66a9e906771
+  languageName: node
+  linkType: hard
+
+"is-wsl@npm:^2.1.1":
+  version: 2.2.0
+  resolution: "is-wsl@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fis-wsl%2Fdownload%2Fis-wsl-2.2.0.tgz"
+  dependencies:
+    is-docker: ^2.0.0
+  checksum: 3dcc4073d4682b9f9a4c59411bb73716cfff88eae58a6bd0af302b8ee016263a5150302bb296bc81a4cb0d3b66c86d82b3ee0146ed15f6558022bc847a2549a2
   languageName: node
   linkType: hard
 
@@ -1265,6 +1338,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.0.1":
+  version: 3.1.20
+  resolution: "nanoid@npm:3.1.20::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fnanoid%2Fdownload%2Fnanoid-3.1.20.tgz"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 4788d36edcfec7bb32ddf33ed8f1f46df2867f70e9b1993bb131f7677e04ead2b621e5d614d2736308be18db1d54208d8ab207b4586bd5b052f71fb9d4c0ebea
+  languageName: node
+  linkType: hard
+
 "native-request@npm:^1.0.5":
   version: 1.0.8
   resolution: "native-request@npm:1.0.8"
@@ -1356,6 +1438,16 @@ fsevents@~2.1.2:
   dependencies:
     wrappy: 1
   checksum: 57afc246536cf6494437f982b26475f22bee860f8b77ce8eb1543f42a8bffe04b2c66ddfea9a16cb25ccb80943f8ee4fc639367ef97b7a6a4f2672eb573963f5
+  languageName: node
+  linkType: hard
+
+"open@npm:^7.0.3":
+  version: 7.3.0
+  resolution: "open@npm:7.3.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fopen%2Fdownload%2Fopen-7.3.0.tgz"
+  dependencies:
+    is-docker: ^2.0.0
+    is-wsl: ^2.1.1
+  checksum: a212fc9cf619a1386b9440b925e72c447b32c9e59b978f86260e99dab2c218c758bc83f9d657a58d1210b65ab5dba77045240d36e71721074926b1e896092db6
   languageName: node
   linkType: hard
 
@@ -1510,6 +1602,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"require-directory@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "require-directory@npm:2.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Frequire-directory%2Fdownload%2Frequire-directory-2.1.1.tgz"
+  checksum: f495d02d89c385af2df4b26f0216ece091e99710d358d0ede424126c476d0c639e8bd77dcd237c00a6a5658f3d862e7513164f8c280263052667d06df830eb23
+  languageName: node
+  linkType: hard
+
 "require-relative@npm:^0.8.7":
   version: 0.8.7
   resolution: "require-relative@npm:0.8.7"
@@ -1590,6 +1689,22 @@ resolve@^1.17.0:
   peerDependencies:
     rollup: ^2.0.0
   checksum: 553cc21efcea3e4d46c61fbd41cb4a82a3ab8e02ae4ce7c03f9248dea93e5a91c3624e2271490ee05b2bb481568305733b496d968d3ac9c99b777a588a336f01
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-visualizer@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "rollup-plugin-visualizer@npm:4.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup-plugin-visualizer%2Fdownload%2Frollup-plugin-visualizer-4.2.0.tgz"
+  dependencies:
+    nanoid: ^3.0.1
+    open: ^7.0.3
+    source-map: ^0.7.3
+    yargs: ^16.0.3
+  peerDependencies:
+    rollup: ">=1.20.0"
+  bin:
+    rollup-plugin-visualizer: bin/cli.js
+  checksum: 4336b9185e95482aca46421902a8704ddb8b6093e8eca998d1af83bf3ad153c92289e37342066006f9c2ca802d15578b0037fa909d2826609bf37fa084ff14cc
   languageName: node
   linkType: hard
 
@@ -1716,6 +1831,7 @@ resolve@^1.17.0:
     rollup-plugin-css-only: ^3.1.0
     rollup-plugin-svelte: ^7.0.0
     rollup-plugin-terser: ^7.0.0
+    rollup-plugin-visualizer: ^4.2.0
     svelte: ^3.31.0
     svelte-check: ^1.0.0
     svelte-preprocess: ^4.0.0
@@ -1812,6 +1928,17 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
+"string-width@npm:^4.1.0, string-width@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "string-width@npm:4.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fstring-width%2Fdownload%2Fstring-width-4.2.0.tgz"
+  dependencies:
+    emoji-regex: ^8.0.0
+    is-fullwidth-code-point: ^3.0.0
+    strip-ansi: ^6.0.0
+  checksum: cf1e8acddf3d6d6e9e168628cc58cf1b33b1e7e801af2a0c18316e4e8beb62361eb9aad6eab2fc86de972ab149cb7262aedc2a5d0c2ce28873c91b171cce84d7
+  languageName: node
+  linkType: hard
+
 "string_decoder@npm:~1.1.1":
   version: 1.1.1
   resolution: "string_decoder@npm:1.1.1::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fstring_decoder%2Fdownload%2Fstring_decoder-1.1.1.tgz"
@@ -1836,6 +1963,15 @@ resolve@^1.17.0:
   dependencies:
     ansi-regex: ^3.0.0
   checksum: 9ac63872c2ba5e8a946c6f3a9c1ab81db5b43bce0d24a33b016e5666d3efda421f721447a1962611053a3ca1595b8742b0216fcc25886958d4565b7afcd27013
+  languageName: node
+  linkType: hard
+
+"strip-ansi@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "strip-ansi@npm:6.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fstrip-ansi%2Fdownload%2Fstrip-ansi-6.0.0.tgz"
+  dependencies:
+    ansi-regex: ^5.0.0
+  checksum: 10568c91cadbef182a807c38dfa718dce15a35b12fcc97b96b6b2029d0508ef66ca93fabddeb49482d9b027495d1e18591858e80f27ad26861c4967c60fd207f
   languageName: node
   linkType: hard
 
@@ -2113,6 +2249,17 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
+"wrap-ansi@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "wrap-ansi@npm:7.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fwrap-ansi%2Fdownload%2Fwrap-ansi-7.0.0.tgz"
+  dependencies:
+    ansi-styles: ^4.0.0
+    string-width: ^4.1.0
+    strip-ansi: ^6.0.0
+  checksum: 09939dd775ae565bb99a25a6c072fe3775a95fa71751b5533c94265fe986ba3e3ab071a027ab76cf26876bd9afd10ac3c2d06d7c4bcce148bf7d2d9514e3a0df
+  languageName: node
+  linkType: hard
+
 "wrappy@npm:1":
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
@@ -2120,10 +2267,39 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
+"y18n@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "y18n@npm:5.0.5::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fy18n%2Fdownload%2Fy18n-5.0.5.tgz"
+  checksum: a7d41b0cccca1c98ebab270a944df48eb3b5352d3be0affb8afc8369823f6aa97a5fbead2c5b35e59a5650cb786b2b37627b45be5ff31f02a80dd3b881aceb17
+  languageName: node
+  linkType: hard
+
 "yallist@npm:^4.0.0":
   version: 4.0.0
   resolution: "yallist@npm:4.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fyallist%2Fdownload%2Fyallist-4.0.0.tgz"
   checksum: a2960ef879af6ee67a76cae29bac9d8bffeb6e9e366c217dbd21464e7fce071933705544724f47e90ba5209cf9c83c17d5582dd04415d86747a826b2a231efb8
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:^20.2.2":
+  version: 20.2.4
+  resolution: "yargs-parser@npm:20.2.4::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fyargs-parser%2Fdownload%2Fyargs-parser-20.2.4.tgz"
+  checksum: 00dd0f23b608aa16962f1b73ac6c461ae6c97e8e85ad24b0c9adfeb5ef20a93a484ba858a6a3200f487478427db27d555d7772463d793d6c27b1b8b614cf3d7e
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^16.0.3":
+  version: 16.2.0
+  resolution: "yargs@npm:16.2.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fyargs%2Fdownload%2Fyargs-16.2.0.tgz"
+  dependencies:
+    cliui: ^7.0.2
+    escalade: ^3.1.1
+    get-caller-file: ^2.0.5
+    require-directory: ^2.1.1
+    string-width: ^4.2.0
+    y18n: ^5.0.5
+    yargs-parser: ^20.2.2
+  checksum: a79ce1f043021cd645de1ffebb6149541d382ba68f4a6b5eca5d2ad65af51893371bbd78e240dc3b6cf0cbb419511ba5bda715dec992e4266e6863ea49f14feb
   languageName: node
   linkType: hard
 
