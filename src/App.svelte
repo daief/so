@@ -6,12 +6,15 @@
   <div class="ma__usually-wrap">
     <RecentUsage />
   </div>
-  <div class="ma__input-wrap">
+  <div class="ma__input-wrap" class:focus={isFocus}>
     <div class="link-type-sl">
       <LinkTypeSelect />
     </div>
+    <i class="divider-y" />
     <div class="search-input-cp">
-      <SearchInput />
+      <SearchInput
+        on:focus={() => (isFocus = true)}
+        on:blur={() => (isFocus = false)} />
     </div>
   </div>
 </main>
@@ -21,6 +24,8 @@
   import SearchInput from '@/components/SearchInput.svelte';
   import RecentUsage from '@/components/RecentUsage.svelte';
   import Time from '@/components/Time.svelte';
+
+  let isFocus = false;
 </script>
 
 <style lang="less">
@@ -44,11 +49,27 @@
       max-width: 100%;
       display: flex;
       align-items: center;
+      padding-right: 10px;
+
+      border-radius: var(--radius);
+      border: 1px solid var(--nc);
+      transition: all 0.3s;
+
+      &:hover,
+      &.focus {
+        border-color: var(--color5);
+      }
     }
   }
 
   .link-type-sl {
     margin-right: 10px;
+  }
+  .divider-y {
+    background-color: grey;
+    display: block;
+    width: 1px;
+    height: 20px;
   }
   .search-input-cp {
     flex-grow: 1;

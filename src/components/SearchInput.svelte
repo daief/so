@@ -8,6 +8,8 @@
     on:keydown={handleOnKeyDown}
     on:compositionstart={() => (hasComposition = true)}
     on:compositionend={() => (hasComposition = false)}
+    on:focus={handleOnFocus}
+    on:blur={handleOnBlur}
     spellcheck={false}
     autocomplete="off"
     maxlength={2048}
@@ -36,8 +38,10 @@
     LINK_TYPE,
   } from '@/shared/links';
   import { recentUsedList, selectedLinkType } from '@/store';
-  import { tick } from 'svelte';
+  import { createEventDispatcher, tick } from 'svelte';
   import { fade } from 'svelte/transition';
+
+  const dispatch = createEventDispatcher();
 
   $: autoCompleteHandler = getAutocompleteWay(LINK_TYPE.google);
 
@@ -135,6 +139,14 @@
       return rs;
     });
   }
+
+  function handleOnFocus(e: FocusEvent) {
+    dispatch('focus', e);
+  }
+
+  function handleOnBlur(e: FocusEvent) {
+    dispatch('blur', e);
+  }
 </script>
 
 <style lang="less">
@@ -147,21 +159,16 @@
     display: block;
     width: 100%;
     padding: 0 10px;
-    border-radius: var(--radius);
     outline: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-box-direction: normal;
     background-color: #fff;
     background-image: none;
-    border: 1px solid var(--nc);
     transition: all 0.3s;
     touch-action: manipulation;
     text-overflow: ellipsis;
     color: var(--tc);
-
-    &:hover {
-      border-color: var(--color5);
-    }
+    border: none;
 
     &:focus {
       border-color: var(--primary);
@@ -172,7 +179,6 @@
     top: 3px;
     width: 100%;
     border-radius: var(--radius);
-    border: 1px solid var(--nc);
     margin: 0;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
