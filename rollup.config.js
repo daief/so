@@ -32,6 +32,7 @@ function getPlugins({ ssr }) {
         dev: !production,
         hydratable: !ssr,
         generate: ssr ? 'ssr' : 'dom',
+        css: false,
       },
     }),
     // we'll extract any component CSS out into

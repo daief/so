@@ -1,5 +1,8 @@
 <main>
   <div style="margin-top: 300px" />
+  <div>
+    <Time />
+  </div>
   <div class="ma__usually-wrap">
     <RecentUsage />
   </div>
@@ -16,10 +19,13 @@
 <script lang="ts">
   import LinkTypeSelect from '@/components/LinkTypeSelect.svelte';
   import SearchInput from '@/components/SearchInput.svelte';
-  import RecentUsage from './components/RecentUsage.svelte';
+  import RecentUsage from '@/components/RecentUsage.svelte';
+  import Time from '@/components/Time.svelte';
 </script>
 
 <style lang="less">
+  @import 'https://fonts.googleapis.com/css2?family=Hanalei+Fill';
+
   main {
     height: 100vh;
     display: flex;

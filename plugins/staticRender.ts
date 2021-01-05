@@ -39,7 +39,7 @@ export const staticRenderPlugin = (): Plugin => {
 
       this.emitFile({
         type: 'asset',
-        source: renderHtml({ content: html, css: css.code }),
+        source: renderHtml({ content: html, css: '' }),
         name: 'Rollup HTML Asset',
         fileName: 'index.html',
       });
