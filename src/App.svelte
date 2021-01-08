@@ -14,8 +14,13 @@
     <div class="search-input-cp">
       <SearchInput
         on:focus={() => (isFocus = true)}
-        on:blur={() => (isFocus = false)} />
+        on:blur={() => (isFocus = false)}
+        bind:this={inputIns} />
     </div>
+
+    <button on:click={inputIns?.submit} class="search-submit">
+      <Icon name="search" size={20} />
+    </button>
   </div>
 </main>
 
@@ -24,12 +29,14 @@
   import SearchInput from '@/components/SearchInput.svelte';
   import RecentUsage from '@/components/RecentUsage.svelte';
   import Time from '@/components/Time.svelte';
+  import Icon from './components/Icon.svelte';
 
   let isFocus = false;
+  let inputIns;
 </script>
 
 <style lang="less">
-  @import 'https://fonts.googleapis.com/css2?family=Hanalei+Fill';
+  @import 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300&display=swap';
 
   main {
     height: 100vh;
@@ -41,8 +48,9 @@
     &__usually-wrap {
       width: 640px;
       max-width: 100%;
-      padding-left: 80px;
       margin-bottom: 10px;
+      padding: 0 4px;
+      white-space: nowrap;
     }
     &__input-wrap {
       width: 640px;
@@ -73,5 +81,19 @@
   }
   .search-input-cp {
     flex-grow: 1;
+  }
+  .search-submit {
+    appearance: none;
+    padding: 4px 6px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: var(--color6);
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color4);
+    }
   }
 </style>

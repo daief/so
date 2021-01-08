@@ -147,6 +147,10 @@
   function handleOnBlur(e: FocusEvent) {
     dispatch('blur', e);
   }
+
+  export function submit() {
+    submitSearch(displayValue);
+  }
 </script>
 
 <style lang="less">

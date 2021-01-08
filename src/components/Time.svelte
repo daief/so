@@ -33,7 +33,7 @@
   section {
     text-align: center;
     margin-bottom: 10px;
-    font-family: 'Hanalei Fill', serif;
+    font-family: 'IBM Plex Mono', serif;
     white-space: nowrap;
   }
 </style>
