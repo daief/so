@@ -27,33 +27,11 @@
 </div>
 
 <script lang="ts">
-  import { linksSchema, LINK_TYPE } from '@/shared/links';
+  import { linksSchema, LINK_TYPE, selectSchema } from '@/shared/links';
   import { selectedLinkType } from '@/store';
   import { fade } from 'svelte/transition';
 
   let showPanel = false;
-
-  function gen(ls: LINK_TYPE[]) {
-    return ls.map(_ => ({
-      ...linksSchema[_],
-      link: _,
-    }));
-  }
-
-  const selectSchema = [
-    {
-      title: '🔍',
-      ls: gen([LINK_TYPE.google, LINK_TYPE.baidu, LINK_TYPE.biying]),
-    },
-    {
-      title: '🛒',
-      ls: gen([LINK_TYPE.tmall, LINK_TYPE.jd]),
-    },
-    {
-      title: '💡',
-      ls: gen([LINK_TYPE.zhihu, LINK_TYPE.bilibili, LINK_TYPE.gaode]),
-    },
-  ];
 
   function handleSelect(lk: LINK_TYPE) {
     selectedLinkType.set(lk);
@@ -89,7 +67,7 @@
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
-    width: 300px;
+    width: 310px;
     max-width: 100%;
   }
   .panel-sl-item {

@@ -12,6 +12,7 @@ import css from 'rollup-plugin-css-only';
 import replace from '@rollup/plugin-replace';
 import alias from '@rollup/plugin-alias';
 import visualizer from 'rollup-plugin-visualizer';
+import jsonPlugin from '@rollup/plugin-json';
 
 // 使用
 // import { staticRenderPlugin, serve } from './plugins';
@@ -59,6 +60,8 @@ function getPlugins({ ssr }) {
     alias({
       entries: [{ find: '@', replacement: 'src' }],
     }),
+
+    jsonPlugin(),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated

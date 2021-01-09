@@ -13,7 +13,7 @@
     spellcheck={false}
     autocomplete="off"
     maxlength={2048}
-    placeholder="随便搜搜~" />
+    {placeholder} />
 
   <div style="position: relative;">
     {#if suggestionList.length > 0}
@@ -32,6 +32,8 @@
 </section>
 
 <script lang="ts">
+  import { getHitokoto } from '@/shared/api';
+  import { useAsync } from '@/shared/hooks';
   import {
     getAutocompleteWay,
     getTargetSearchUrl,
@@ -42,6 +44,10 @@
   import { fade } from 'svelte/transition';
 
   const dispatch = createEventDispatcher();
+
+  const [res] = useAsync(getHitokoto);
+
+  $: placeholder = $res.data?.data?.hitokoto || '🔍 搜索...';
 
   $: autoCompleteHandler = getAutocompleteWay(LINK_TYPE.google);
 
@@ -79,7 +85,6 @@
       target: any;
     },
   ) {
-    if (!trimedValue) return;
     if (e.key === 'Enter') {
       if (hasComposition) return;
       submitSearch(displayValue);
@@ -127,6 +132,7 @@
   }
 
   function submitSearch(searchVal: string) {
+    searchVal = searchVal || placeholder;
     const target = getTargetSearchUrl($selectedLinkType, searchVal);
     window.open(target, '_blank');
     value = '';

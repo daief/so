@@ -10,6 +10,10 @@ export enum LINK_TYPE {
   zhihu,
   bilibili,
   gaode,
+  github,
+  youtube,
+  douban,
+  weibo,
 }
 
 export function getAutocompleteWay(type: LINK_TYPE) {
@@ -76,9 +80,56 @@ export const linksSchema: Record<
     searchSchema: 'https://ditu.amap.com/search?query=${q}',
     name: '高德',
   },
+  [LINK_TYPE.github]: {
+    searchSchema: 'https://github.com/search?q=${q}',
+    name: 'Github',
+  },
+  [LINK_TYPE.youtube]: {
+    searchSchema: 'https://www.youtube.com/results?search_query=${q}',
+    name: 'Youtube',
+  },
+  [LINK_TYPE.douban]: {
+    searchSchema: 'https://www.douban.com/search?source=suggest&q=${q}',
+    name: '豆瓣',
+  },
+  [LINK_TYPE.weibo]: {
+    searchSchema: 'https://s.weibo.com/weibo/${q}',
+    name: '微博',
+  },
 };
 
 export function getTargetSearchUrl(type: LINK_TYPE, q: string) {
   const res = linksSchema[type] || linksSchema[LINK_TYPE.google];
   return res.searchSchema.replace('${q}', encodeURIComponent(q));
 }
+
+function gen(ls: LINK_TYPE[]) {
+  return ls.map(_ => ({
+    ...linksSchema[_],
+    link: _,
+  }));
+}
+
+export const selectSchema = [
+  {
+    title: '搜索',
+    ls: gen([LINK_TYPE.google, LINK_TYPE.baidu, LINK_TYPE.biying]),
+  },
+  {
+    title: '👨‍💻',
+    ls: gen([LINK_TYPE.github, LINK_TYPE.zhihu]),
+  },
+  {
+    title: '生活',
+    ls: gen([
+      LINK_TYPE.tmall,
+      LINK_TYPE.jd,
+      LINK_TYPE.bilibili,
+      LINK_TYPE.gaode,
+      LINK_TYPE.youtube,
+      LINK_TYPE.douban,
+      LINK_TYPE.weibo,
+      LINK_TYPE.amazon,
+    ]),
+  },
+];

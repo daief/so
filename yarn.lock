@@ -76,6 +76,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-json@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@rollup/plugin-json@npm:4.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-json%2Fdownload%2F%40rollup%2Fplugin-json-4.1.0.tgz"
+  dependencies:
+    "@rollup/pluginutils": ^3.0.8
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0
+  checksum: 07bc6bc83d07aefd35278e4e1a125e65210061b3dcab50c0f01273c54f43a60a3e01c1a0fed451e35d592ef1cbc8288ec8148a6229cf8cca9cdbf11a6d2d7d1c
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-node-resolve@npm:^10.0.0":
   version: 10.0.0
   resolution: "@rollup/plugin-node-resolve@npm:10.0.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fplugin-node-resolve%2Fdownload%2F%40rollup%2Fplugin-node-resolve-10.0.0.tgz"
@@ -130,7 +141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^3.1.0":
+"@rollup/pluginutils@npm:^3.0.8, @rollup/pluginutils@npm:^3.1.0":
   version: 3.1.0
   resolution: "@rollup/pluginutils@npm:3.1.0::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fpluginutils%2Fdownload%2F%40rollup%2Fpluginutils-3.1.0.tgz"
   dependencies:
@@ -147,6 +158,13 @@ __metadata:
   version: 1.0.10
   resolution: "@tsconfig/svelte@npm:1.0.10::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tsconfig%2Fsvelte%2Fdownload%2F%40tsconfig%2Fsvelte-1.0.10.tgz"
   checksum: d38480e0ac7482b488083cbb8aad041862d4a178b879aac86c54ca8ce27b736d6432c79c48a25df9f4f2c03fcbbeb79c81b5e120c199a4b8b9ce38b22961d861
+  languageName: node
+  linkType: hard
+
+"@types/debug@npm:^4":
+  version: 4.1.5
+  resolution: "@types/debug@npm:4.1.5::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fdebug%2Fdownload%2F%40types%2Fdebug-4.1.5.tgz"
+  checksum: 416ad24bc589be0fb8c78bea972aa7d4ffdf6b136239701b1792674463b2dbf8c6707f6055ec484f79ec1f2b528ffef90c87e55df7e4a0f458184cad5bf0cfc8
   languageName: node
   linkType: hard
 
@@ -583,6 +601,18 @@ __metadata:
   dependencies:
     assert-plus: ^1.0.0
   checksum: 5959409ee42dc4bdbf3fa384b801ece580ca336658bb0342ffab0099b3fc6bf9b3e239e1b82dcc4fcaeee315353e08f2eae47b0928a6a579391598c44958afa1
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.3.1":
+  version: 4.3.2
+  resolution: "debug@npm:4.3.2::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-4.3.2.tgz"
+  dependencies:
+    ms: 2.1.2
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 5543570879e2274f6725d4285a034d6e0822d35faefc6f55965933fb440e8c21eb3a0bef934e66f4b6b491f898ee2de37cab980e9d4fd61372136c19d3ce4527
   languageName: node
   linkType: hard
 
@@ -1338,6 +1368,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"ms@npm:2.1.2":
+  version: 2.1.2
+  resolution: "ms@npm:2.1.2::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.1.2.tgz"
+  checksum: 9b65fb709bc30c0c07289dcbdb61ca032acbb9ea5698b55fa62e2cebb04c5953f1876a1f3f7f4bc2e91d4bf4d86003f3e207c3bc6ee2f716f99827e62389cd0e
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.0.1":
   version: 3.1.20
   resolution: "nanoid@npm:3.1.20::__archiveUrl=https%3A%2F%2Fregistry.npm.taobao.org%2Fnanoid%2Fdownload%2Fnanoid-3.1.20.tgz"
@@ -1816,14 +1853,17 @@ resolve@^1.17.0:
     "@ant-design/colors": ^5.0.1
     "@rollup/plugin-alias": ^3.1.1
     "@rollup/plugin-commonjs": ^16.0.0
+    "@rollup/plugin-json": ^4.1.0
     "@rollup/plugin-node-resolve": ^10.0.0
     "@rollup/plugin-replace": ^2.3.4
     "@rollup/plugin-typescript": ^6.0.0
     "@rollup/pluginutils": ^4.1.0
     "@tsconfig/svelte": ^1.0.0
+    "@types/debug": ^4
     "@types/node": ^14.14.16
     "@types/query-string": ^6
     axios: ^0.21.1
+    debug: ^4.3.1
     less: ^3.11.0
     normalize.css: ^8.0.1
     query-string: ^6.13.7
