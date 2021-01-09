@@ -9,7 +9,7 @@ const renderHtml = (opts: { content: string; css: string }) => `
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>Svelte app</title>
+    <title>So</title>
     <style>${opts.css}</style>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="./bundle.css" />
