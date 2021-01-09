@@ -21,7 +21,7 @@
         bind:this={inputIns} />
     </div>
 
-    <button on:click={inputIns?.submit} class="search-submit">
+    <button on:click={inputIns && inputIns.submit} class="search-submit">
       <Icon name="search" size={20} />
     </button>
   </div>
