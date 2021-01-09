@@ -3,7 +3,7 @@
 <script lang="ts">
   import { isNil } from '@/shared/utils';
 
-  export let name: 'search';
+  export let name: 'moon' | 'moon_stars_fill' | 'search';
   export let size: number | string = null;
   export let color: string = null;
 

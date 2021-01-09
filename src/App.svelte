@@ -1,5 +1,8 @@
 <main>
   <div style="margin-top: 300px" />
+  <div class="ma__darkmode-wrap">
+    <DarkMode />
+  </div>
   <div>
     <Time />
   </div>
@@ -30,6 +33,7 @@
   import RecentUsage from '@/components/RecentUsage.svelte';
   import Time from '@/components/Time.svelte';
   import Icon from './components/Icon.svelte';
+  import DarkMode from './components/DarkMode.svelte';
 
   let isFocus = false;
   let inputIns;
@@ -43,8 +47,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   .ma {
+    &__darkmode-wrap {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
     &__usually-wrap {
       width: 640px;
       max-width: 100%;
@@ -74,7 +84,7 @@
     margin-right: 10px;
   }
   .divider-y {
-    background-color: grey;
+    background-color: var(--tc);
     display: block;
     width: 1px;
     height: 20px;

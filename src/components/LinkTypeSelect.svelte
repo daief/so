@@ -64,7 +64,7 @@
   .panel-content {
     padding: 15px;
     margin-top: 8px;
-    background-color: #fff;
+    background-color: var(--bgColorSecondary);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
     width: 310px;

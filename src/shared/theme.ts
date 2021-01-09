@@ -1,25 +1,62 @@
-import * as colors from '@ant-design/colors';
+import { generate } from '@ant-design/colors';
 
-export function createThemeForCSS(color = '#ff3e00') {
-  const mainColors = colors.generate(color);
-  const paramry = color;
+const defaultPrimary = '#ff3e00';
+
+export function createThemeForCSS(
+  vars: Partial<{
+    primary: string;
+    mainColors: string[];
+    /**
+     * normal color
+     */
+    nc: string;
+    /**
+     * text color
+     */
+    tc: string;
+    /**
+     * text color deeper 1
+     */
+    tcD1: string;
+    radius: string;
+    bgColor: string;
+    bgColorSecondary: string;
+    placeholderColor: string;
+    [k: string]: string | string[];
+  }> = {},
+) {
+  const { mainColors, ...rest } = {
+    primary: defaultPrimary,
+    mainColors: generate(defaultPrimary),
+    nc: '#d9d9d9',
+    tc: 'rgb(51 51 51 / 85%)',
+    tcD1: '#333',
+    radius: '4px',
+    bgColor: '#fff',
+    bgColorSecondary: '#fff',
+    placeholderColor: 'rgb(117, 117, 117)',
+    ...vars,
+  };
   const colorsStr = mainColors.map((c, i) => `--color${i + 1}: ${c};`).join('');
+  const restStyle = Object.entries(rest)
+    .map(([key, val]) => `--${key}: ${val};`)
+    .join('');
   const style = `
     :root {
-      --primary: ${paramry};
       ${colorsStr}
-      /* normal color */
-      --nc: #d9d9d9;
-      /* text color */
-      --tc: rgb(51 51 51 / 85%);
-      --radius: 4px;
+      ${restStyle}
     }
   `;
   return style;
 }
 
-if (!__SERVER__) {
-  const el = document.createElement('style');
-  el.innerHTML = createThemeForCSS();
-  document.head.append(el);
+let styleEl: HTMLStyleElement;
+
+export function setThemeStyleToDOM(style: string) {
+  if (__SERVER__) return;
+  if (!styleEl) {
+    styleEl = document.createElement('style');
+    document.head.append(styleEl);
+  }
+  styleEl.innerHTML = style;
 }

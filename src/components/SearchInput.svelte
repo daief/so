@@ -16,7 +16,7 @@
     {placeholder} />
 
   <div style="position: relative;">
-    {#if suggestionList.length > 0}
+    {#if isFocus && suggestionList.length > 0}
       <ul class="sg-wrap el-shadow " transition:fade={{ duration: 200 }}>
         {#each suggestionList as item, idx}
           <li
@@ -47,7 +47,8 @@
 
   const [res] = useAsync(getHitokoto);
 
-  $: placeholder = $res.data?.data?.hitokoto || '🔍 搜索...';
+  $: hitoko = $res.data?.data?.hitokoto;
+  $: placeholder = hitoko || '🔍 搜索...';
 
   $: autoCompleteHandler = getAutocompleteWay(LINK_TYPE.google);
 
@@ -57,14 +58,18 @@
   let hasComposition = false;
   let sgHoverIndex = 0;
   let autoCompleteId: any;
+  let isFocus = false;
 
   let suggestionList = [];
 
-  $: trimedValue = value.trim();
   $: displayValue =
     sgHoverIndex === 0 ? value : suggestionList[sgHoverIndex - 1];
 
-  $: if (value && !__SERVER__) {
+  $: if (!isFocus) {
+    sgHoverIndex = 0;
+  }
+
+  $: if (value && isFocus && !__SERVER__) {
     clearTimeout(autoCompleteId);
     autoCompleteId = setTimeout(async () => {
       const ls = await autoCompleteHandler(value);
@@ -132,7 +137,9 @@
   }
 
   function submitSearch(searchVal: string) {
-    searchVal = searchVal || placeholder;
+    searchVal = (searchVal || '').trim();
+    searchVal = searchVal || hitoko;
+    if (!searchVal) return;
     const target = getTargetSearchUrl($selectedLinkType, searchVal);
     window.open(target, '_blank');
     value = '';
@@ -147,10 +154,13 @@
   }
 
   function handleOnFocus(e: FocusEvent) {
+    isFocus = true;
     dispatch('focus', e);
   }
 
   function handleOnBlur(e: FocusEvent) {
+    value = displayValue;
+    isFocus = false;
     dispatch('blur', e);
   }
 
@@ -172,7 +182,7 @@
     outline: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-box-direction: normal;
-    background-color: #fff;
+    background: none;
     background-image: none;
     transition: all 0.3s;
     touch-action: manipulation;
@@ -183,14 +193,21 @@
     &:focus {
       border-color: var(--primary);
     }
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--placeholderColor);
+      opacity: 1; /* Firefox */
+    }
   }
+
   .sg-wrap {
     position: absolute;
     top: 3px;
     width: 100%;
     border-radius: var(--radius);
     margin: 0;
-    background-color: #fff;
+    background-color: var(--bgColorSecondary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
     padding: 10px 0;
 
@@ -207,6 +224,7 @@
       &:hover,
       &.focus {
         background-color: #f4f4f4;
+        color: var(--tcD1);
       }
     }
   }
