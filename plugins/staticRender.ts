@@ -12,15 +12,14 @@ const renderHtml = (opts: { content: string; css: string }) => `
     <title>Svelte app</title>
     <style>${opts.css}</style>
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <!-- <link rel="stylesheet" href="/global.css" /> -->
-    <link rel="stylesheet" href="/bundle.css" />
+    <link rel="stylesheet" href="./bundle.css" />
   </head>
 
   <body>
     <div id="app">${opts.content}</div>
 
     <script defer async src="https://daief.tech/js/daief/ga.js"></script>
-    <script defer src="/bundle.js"></script>
+    <script defer src="./bundle.js"></script>
   </body>
 </html>`;
 
