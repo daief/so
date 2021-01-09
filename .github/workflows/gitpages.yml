@@ -11,7 +11,7 @@ on:
     branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch:
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,11 +36,11 @@ jobs:
       - name: Cache multiple paths
         uses: actions/cache@v2
         with:
-        path: |
-          ~/cache
-          !~/cache/exclude
-          **/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          path: |
+            ~/cache
+            !~/cache/exclude
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
 
       - run: yarn build
 
