@@ -15,7 +15,12 @@ recentUsedList.subscribe(value => {
   LS.set(LS_RECENT_USAGE_KEY, value);
 });
 
-export const isDarkMode = writable<boolean>(LS.get(LS_IS_DARK_MODE_KEY));
+export const isDarkMode = writable<boolean>(
+  LS.get(LS_IS_DARK_MODE_KEY) ||
+    (__SERVER__
+      ? false
+      : window.matchMedia?.('(prefers-color-scheme: dark)')?.matches),
+);
 
 isDarkMode.subscribe(val => {
   val = !!val;
