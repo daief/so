@@ -13,6 +13,7 @@ import replace from '@rollup/plugin-replace';
 import alias from '@rollup/plugin-alias';
 import visualizer from 'rollup-plugin-visualizer';
 import jsonPlugin from '@rollup/plugin-json';
+import pkg from './package.json';
 
 // 使用
 // import { staticRenderPlugin, serve } from './plugins';
@@ -99,6 +100,11 @@ export default [
     watch: {
       clearScreen: false,
     },
+    external: [
+      // ...Object.keys(pkg.dependencies),
+      // ...Object.keys(pkg.devDependencies),
+      'axios',
+    ],
   },
   {
     input: 'src/main.ts',
