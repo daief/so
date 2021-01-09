@@ -31,17 +31,17 @@ jobs:
           # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
           node-version: 10.x
 
-      - run: yarn install
+      
 
       - name: Cache multiple paths
         uses: actions/cache@v2
         with:
           path: |
-            ~/cache
-            !~/cache/exclude
+            ~/.yarn
             **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
+      - run: yarn install
       - run: yarn build
 
       - name: Deploy
