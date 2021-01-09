@@ -5,15 +5,40 @@
 
   let now = __SERVER__ ? '----/--/-- --:--:--' : Date.now();
 
-  const fomater = new Intl.DateTimeFormat(['zh-CN', 'en-US'], {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false,
-  });
+  let fomater;
+  try {
+    fomater = new Intl.DateTimeFormat(['zh-CN', 'en-US'], {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+    });
+  } catch (error) {
+    fomater = {
+      format: val => {
+        let d: Date;
+        if (val instanceof Date) {
+          d = val;
+        } else {
+          d = new Date(val);
+        }
+        return isNaN(+d)
+          ? val + ''
+          : d.toLocaleString(['zh-CN', 'en-US'], {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              hour12: false,
+            });
+      },
+    };
+  }
 
   $: displayTime = typeof now === 'string' ? now : fomater.format(now);
 
