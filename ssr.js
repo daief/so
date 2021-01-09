@@ -2415,11 +2415,49 @@ const RecentUsage = create_ssr_component(($$result, $$props, $$bindings, slots) 
 
 const css$3 = {
 	code: "section.svelte-hrsx5p{text-align:center;margin-bottom:10px;font-family:'IBM Plex Mono', serif;white-space:nowrap}",
-	map: "{\"version\":3,\"file\":\"Time.svelte\",\"sources\":[\"Time.svelte\"],\"sourcesContent\":[\"<section>{displayTime}</section>\\n\\n<script lang=\\\"ts\\\">import { onMount } from 'svelte';\\nlet now = true ? '----/--/-- --:--:--' : Date.now();\\nconst fomater = new Intl.DateTimeFormat(['zh-CN', 'en-US'], {\\n    year: 'numeric',\\n    month: '2-digit',\\n    day: '2-digit',\\n    hour: '2-digit',\\n    minute: '2-digit',\\n    second: '2-digit',\\n    hour12: false,\\n});\\n$: displayTime = typeof now === 'string' ? now : fomater.format(now);\\nfunction loop() {\\n    now = Date.now();\\n    requestAnimationFrame(loop);\\n}\\nonMount(() => {\\n    if (!true) {\\n        loop();\\n    }\\n});\\n//# sourceMappingURL=Time.svelte.js.map</script>\\n\\n<style lang=\\\"less\\\">section {\\n  text-align: center;\\n  margin-bottom: 10px;\\n  font-family: 'IBM Plex Mono', serif;\\n  white-space: nowrap;\\n}\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAyBmB,OAAO,cAAC,CAAC,AAC1B,UAAU,CAAE,MAAM,CAClB,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,eAAe,CAAC,CAAC,KAAK,CACnC,WAAW,CAAE,MAAM,AACrB,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Time.svelte\",\"sources\":[\"Time.svelte\"],\"sourcesContent\":[\"<section>{displayTime}</section>\\n\\n<script lang=\\\"ts\\\">import { onMount } from 'svelte';\\nlet now = true ? '----/--/-- --:--:--' : Date.now();\\nlet fomater;\\ntry {\\n    fomater = new Intl.DateTimeFormat(['zh-CN', 'en-US'], {\\n        year: 'numeric',\\n        month: '2-digit',\\n        day: '2-digit',\\n        hour: '2-digit',\\n        minute: '2-digit',\\n        second: '2-digit',\\n        hour12: false,\\n    });\\n}\\ncatch (error) {\\n    fomater = {\\n        format: val => {\\n            let d;\\n            if (val instanceof Date) {\\n                d = val;\\n            }\\n            else {\\n                d = new Date(val);\\n            }\\n            return isNaN(+d)\\n                ? val + ''\\n                : d.toLocaleString(['zh-CN', 'en-US'], {\\n                    year: 'numeric',\\n                    month: '2-digit',\\n                    day: '2-digit',\\n                    hour: '2-digit',\\n                    minute: '2-digit',\\n                    second: '2-digit',\\n                    hour12: false,\\n                });\\n        },\\n    };\\n}\\n$: displayTime = typeof now === 'string' ? now : fomater.format(now);\\nfunction loop() {\\n    now = Date.now();\\n    requestAnimationFrame(loop);\\n}\\nonMount(() => {\\n    if (!true) {\\n        loop();\\n    }\\n});\\n//# sourceMappingURL=Time.svelte.js.map</script>\\n\\n<style lang=\\\"less\\\">section {\\n  text-align: center;\\n  margin-bottom: 10px;\\n  font-family: 'IBM Plex Mono', serif;\\n  white-space: nowrap;\\n}\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAoDmB,OAAO,cAAC,CAAC,AAC1B,UAAU,CAAE,MAAM,CAClB,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,eAAe,CAAC,CAAC,KAAK,CACnC,WAAW,CAAE,MAAM,AACrB,CAAC\"}"
 };
 
 const Time = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	let now =  "----/--/-- --:--:--" ;
+	let fomater;
+
+	try {
+		fomater = new Intl.DateTimeFormat(["zh-CN", "en-US"],
+		{
+				year: "numeric",
+				month: "2-digit",
+				day: "2-digit",
+				hour: "2-digit",
+				minute: "2-digit",
+				second: "2-digit",
+				hour12: false
+			});
+	} catch(error) {
+		fomater = {
+			format: val => {
+				let d;
+
+				if (val instanceof Date) {
+					d = val;
+				} else {
+					d = new Date(val);
+				}
+
+				return isNaN(+d)
+				? val + ""
+				: d.toLocaleString(["zh-CN", "en-US"], {
+						year: "numeric",
+						month: "2-digit",
+						day: "2-digit",
+						hour: "2-digit",
+						minute: "2-digit",
+						second: "2-digit",
+						hour12: false
+					});
+			}
+		};
+	}
 
 	onMount(() => {
 	});
